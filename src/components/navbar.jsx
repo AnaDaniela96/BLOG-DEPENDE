@@ -1,8 +1,9 @@
 import React from "react";
+import '../styles/navbar.css';
 
 function Navbar() {
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar navbar-expand-lg">
             <div className="container-fluid">
                 <a className="navbar-brand" href="#">MiMarca</a>
                 <button
@@ -22,10 +23,16 @@ function Navbar() {
                             <a className="nav-link active" href="#">Inicio</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Servicios</a>
+                            <a className="nav-link" href="#">Películas</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Contacto</a>
+                            <a className="nav-link" href="#">Exposiones</a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link" href="#">Libros</a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link" href="#">Contenidos</a>
                         </li>
                     </ul>
                 </div>
