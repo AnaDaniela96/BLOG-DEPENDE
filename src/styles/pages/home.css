@@ -13,11 +13,3 @@ a {
     width: 250px;
 }
 
-.card-title {
-    font-size: 2rem;
-    color: white;
-    font-weight: 900;
-    position: relative;
-    top: -100px;
-    font-family: "Merriweather", serif;
-}

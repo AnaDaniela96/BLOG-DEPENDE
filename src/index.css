@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+:root {
+    /* 🎨 Paleta de colores */
+    --primary-color: #1e3a8a; /* Azul oscuro */
+    --secondary-color: #9333ea; /* Morado */
+    --accent-color: #facc15; /* Amarillo */
+    --background-color: #f4f4f5; /* Gris claro */
+    --text-color: #1f2937; /* Gris oscuro */
+    --card-bg: #ffffff; /* Fondo de tarjetas */
+    
+    /* 🖋️ Tipografía */
+    --font-primary: 'Quicksand', sans-serif;
+    --font-secondary: 'Boldonse', system-ui;
+}
+
+/* 🎨 Aplicar estilos globales */
+body {
+    font-family: var(--font-primary);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos generales para botones */
+button {
+    font-family: var(--font-primary);
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Estilos para tarjetas */
+.card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+/* Títulos */
+h1, h2, h3 {
+    font-family: var(--font-secondary);
+}
