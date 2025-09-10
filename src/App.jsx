@@ -5,11 +5,11 @@ import BlogList from "@/features/blog/pages/BlogList";
 import About from "@/pages/About";
 import NotFound from "@/pages/NotFound";
 import Home from "@/pages/Home";
-import Movies from "@/pages/Movies";
-
+import Movies from "@/features/play/pages/Movies";
+import MovieDetail from "@/features/play/pages/MovieDetail";
+import PlayIndex from "./features/play/pages/PlayIndex";
 
 import Navbar from "@/components/navbar";
-
 
 function App() {
   return (
@@ -21,9 +21,12 @@ function App() {
         <Route path="/blog" element={<BlogList />} />
         <Route path="/blog/:slug" element={<BlogPost />} />
 
-        <Route path="/peliculas" element={<Movies />} />
-        {/* <Route path="/peliculas/:id" element={<MovieDetail />} /> */}
+        <Route path="/play" element={<PlayIndex />} />
+        <Route path="/play/movies" element={<Movies />} />
+        <Route path="/play/movies/:id" element={<MovieDetail />} />
+
         <Route path="/about" element={<About />} />
+        
         <Route path="*" element={<NotFound />} />
       </Routes>
 
