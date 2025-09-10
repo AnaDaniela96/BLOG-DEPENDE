@@ -1,12 +1,12 @@
 export const movies = [
     {
-        id:0,
+        id: 0,
         name: "Nosferatu",
         director: {
             directorPhoto: "/img/robertEgers.webp",
             directorName: "Robert Eggers",
         },
-            year: 2024,
+        year: 2024,
         country: [
             "República Checa",
             "Estados Unidos"
@@ -32,7 +32,7 @@ export const movies = [
             directorPhoto: "/img/robertEgers.webp",
             directorName: "Sean Baker",
         },
-            year: 2024,
+        year: 2024,
         country: ["Estados Unidos"],
         genre: ["Drama", "Comedia"],
         calification: {
@@ -52,7 +52,7 @@ export const movies = [
             directorPhoto: "/img/robertEgers.webp",
             directorName: "Sara Sugarman",
         },
-            year: 2004,
+        year: 2004,
         country: ["Estados Unidos"],
         genre: ["Comedia", "Juvenil"],
         calification: {
@@ -72,7 +72,7 @@ export const movies = [
             directorPhoto: "/img/robertEgers.webp",
             directorName: "Jon Turteltaub",
         },
-            year: 1995,
+        year: 1995,
         country: ["Estados Unidos"],
         genre: ["Comedia romántica"],
         calification: {
@@ -92,7 +92,7 @@ export const movies = [
             directorPhoto: "/img/robertEgers.webp",
             directorName: "Alfonso Cuarón",
         },
-            year: 2001,
+        year: 2001,
         country: ["México"],
         genre: ["Drama", "Road movie"],
         calification: {
@@ -112,7 +112,7 @@ export const movies = [
             directorPhoto: "/img/robertEgers.webp",
             directorName: "Edward Berger",
         },
-            year: 2024,
+        year: 2024,
         country: ["Reino Unido"],
         genre: ["Drama", "Thriller político"],
         calification: {
@@ -132,7 +132,7 @@ export const movies = [
             directorPhoto: "/img/robertEgers.webp",
             directorName: "Mariel García Spooner",
         },
-            year: 2021,
+        year: 2021,
         country: ["Panamá"],
         genre: ["Comedia romántica"],
         calification: {
@@ -152,7 +152,7 @@ export const movies = [
             directorPhoto: "/img/robertEgers.webp",
             directorName: "Jake Szymanski",
         },
-            year: 2016,
+        year: 2016,
         country: ["Estados Unidos"],
         genre: ["Comedia"],
         calification: {
@@ -172,7 +172,7 @@ export const movies = [
             directorPhoto: "/img/robertEgers.webp",
             directorName: "Garry Marshall",
         },
-            year: 1990,
+        year: 1990,
         country: ["Estados Unidos"],
         genre: ["Comedia romántica"],
         calification: {
@@ -192,7 +192,7 @@ export const movies = [
             directorPhoto: "/img/robertEgers.webp",
             directorName: "Betty Thomas",
         },
-            year: 2006,
+        year: 2006,
         country: ["Estados Unidos"],
         genre: ["Comedia juvenil"],
         calification: {
@@ -212,7 +212,7 @@ export const movies = [
             directorPhoto: "/img/robertEgers.webp",
             directorName: "Phil Traill",
         },
-            year: 2009,
+        year: 2009,
         country: ["Estados Unidos"],
         genre: ["Comedia romántica"],
         calification: {
@@ -232,7 +232,7 @@ export const movies = [
             directorPhoto: "/img/robertEgers.webp",
             directorName: "Paul Feig",
         },
-            year: 2013,
+        year: 2013,
         country: ["Estados Unidos"],
         genre: ["Acción", "Comedia"],
         calification: {
@@ -252,7 +252,7 @@ export const movies = [
             directorPhoto: "/img/robertEgers.webp",
             directorName: "Martin Scorsese, Francis Ford Coppola, Woody Allen",
         },
-            year: 1989,
+        year: 1989,
         country: ["Estados Unidos"],
         genre: ["Drama", "Antología"],
         calification: {
@@ -262,7 +262,8 @@ export const movies = [
         },
         comment: "Tres relatos únicos que capturan la esencia de Nueva York a través de distintos estilos cinematográficos.",
         url_imagen: "/img/newyork.jpg",
-        url_trailer:"https://www.youtube.com/embed/mqNoTUstmDc?si=yVyZ-nx9PmzYWYIl",
+        url_trailer: "https://www.youtube.com/embed/mqNoTUstmDc?si=yVyZ-nx9PmzYWYIl",
         IseeIn: 2025,
     }
 ]
+export default movies;
