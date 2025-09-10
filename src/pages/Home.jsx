@@ -5,6 +5,10 @@ import '../styles/pages/home.css';
 function Home() {
     return (
         <>
+         <div className="flex h-screen items-center justify-center bg-gradient-to-r from-green-400 to-blue-500">
+      <h1 className="text-5xl font-bold text-white">¡Hola Tailwind!</h1>
+    </div>
+        <h1 class="text-3xl font-bold underline">    Hello world!  </h1>
             <main className="container">
 
 
@@ -22,6 +26,8 @@ function Home() {
                 />
 
             </article>
+
+
         </>
     )
 }
