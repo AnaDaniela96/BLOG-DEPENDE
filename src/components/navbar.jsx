@@ -15,20 +15,11 @@ export default function Navbar() {
 
           {/* Links (desktop) */}
           <div className="hidden md:flex space-x-6">
-            <Link to="/" className="hover:text-brand-blue">
-              Música
+            <Link to="/blog" className="hover:text-brand-blue">
+              Blog
             </Link>
-            <Link to="/peliculas" className="hover:text-brand-blue">
-              Cine
-            </Link>
-            <Link to="/about" className="hover:text-brand-blue">
-              Crónicas
-            </Link>
-            <Link to="/about" className="hover:text-brand-blue">
-              Tecnología
-            </Link>
-            <Link to="/about" className="hover:text-brand-blue">
-              Literatura
+            <Link to="/play" className="hover:text-brand-blue">
+              Miscelanea
             </Link>
             <Link to="/about" className="hover:text-brand-blue">
               Sobre nosotros
