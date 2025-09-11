@@ -22,8 +22,8 @@ export default function BlogList() {
   }, [q, tag]);
 
   return (
-    <div className="space-y-6">
-      <header className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+    <div className="m-4 space-y-6">
+      <header className="m-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <h1 className="text-3xl font-semibold">Blog</h1>
         <div className="flex gap-2">
           <input

@@ -4,7 +4,7 @@ export const posts = [
     title: "Bienvenida: una revista digital histórico-pop",
     date: "2025-09-10",
     tags: ["editorial", "presentación"],
-    cover: "/img/cover-bienvenida.jpg",
+    cover: "/banners/banner-depende.gif",
     // 👇 SEO
     description: "Qué encontrarás aquí y por qué mezclamos cultura pop, historia y filosofía.",
     ogImage: "/img/og-bienvenida.jpg", // opcional, 1200x630 recomendado
