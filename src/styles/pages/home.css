@@ -15,3 +15,14 @@ a {
     width: 250px;
 }
 
+.minicard {
+    background-color: var(--text-color);
+}
+
+.minicard-text {
+    color: var(--card-bg);
+}
+
+.card-podcast {
+    background-color: var(--accent-color);
+}
