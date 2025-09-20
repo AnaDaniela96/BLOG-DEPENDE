@@ -1,4 +1,4 @@
-import movies from "@/features/play/data/movies";
+import movies from "@/features/play/movies/data/movies";
 
 export const listMovies = async () => Promise.resolve(movies);
 export const getMovie = async (id) =>
