@@ -1,12 +1,8 @@
 .navbar {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
     font-family: var(--font-primary);
-    background: var(--background-color);
+    /* background: var(--background-color);
+    } */
 }
-
 .link {
     padding: 10px;
 }
