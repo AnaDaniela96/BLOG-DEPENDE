@@ -1,4 +1,4 @@
-export const posts = [
+const posts = [
     {
     slug: "bienvenida",
     title: "Bienvenida: una revista digital histórico-pop",
