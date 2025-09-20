@@ -1,0 +1,30 @@
+const series = [
+    {
+      id: 1,
+      title: "Breaking Bad",
+      createBy: "Vince Gilligan",
+      review: "La transformación de un profesor de química en un poderoso narcotraficante.",
+      tags: ["drama", "crimen", "suspenso"],
+      seasons: 5,
+      chapterTotal: 62,
+      county: "Estados Unidos",
+      language: "Inglés",
+      yearStart: 2008,
+      yearEnd: 2013,
+      calification: 5,
+    },
+    {
+      id: 2,
+      title: "Stranger Things",
+      createBy: "Los hermanos Duffer",
+      review: "Un grupo de niños se enfrenta a fuerzas sobrenaturales en un pequeño pueblo.",
+      tags: ["ciencia ficción", "misterio", "aventura"],
+      seasons: 4,
+      chapterTotal: 34,
+      county: "Estados Unidos",
+      language: "Inglés",
+      yearStart: 2016,
+      state: "En emisión",
+      calification: 3,
+    }
+  ];
