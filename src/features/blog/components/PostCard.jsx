@@ -48,7 +48,7 @@ export default function PostCard({ post }) {
           {post.title}
         </h3>
         <p className="text-xs text-gray-500 mt-1">
-          {formatDate(post.date)} · {readingTime(post.content)}
+          {formatDate(post.published_at)} · {readingTime(post.content)}
         </p>
         {post.tags && post.tags.length > 0 && (
           <div className="mt-1 flex flex-wrap gap-1">

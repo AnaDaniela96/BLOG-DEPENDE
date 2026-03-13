@@ -186,3 +186,5 @@ function AuthorCard({ name, role, bio }) {
     </article>
   );
 }
+
+
