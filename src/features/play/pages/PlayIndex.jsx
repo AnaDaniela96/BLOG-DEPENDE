@@ -86,7 +86,7 @@ export default function PlayIndex() {
             // image: "/img/bg-libros.jpg",
           },
           {
-            to: "/miscelanea/musica",
+            to: "/play/music/",
             title: "Música",
             subtitle: "Discos y playlists",
             emoji: "🎧",

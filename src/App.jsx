@@ -9,6 +9,11 @@ import Movies from "@/features/play/movies/pages/Movies";
 import MovieDetail from "@/features/play/movies/pages/MovieDetail";
 import PlayIndex from "@/features/play/pages/PlayIndex";
 
+import Music from "@/features/play/music/pages/Music";
+import MusicDetail from "@/features/play/music/pages/MusicDetail";
+
+
+
 import Navbar from "@/components/navbar";
 import Footer from "./components/Footer";
 
@@ -25,6 +30,8 @@ function App() {
         <Route path="/play" element={<PlayIndex />} />
         <Route path="/play/movies" element={<Movies />} />
         <Route path="/play/movies/:id" element={<MovieDetail />} />
+        <Route path="/play/music" element={<Music />} />
+        <Route path="/play/music/:slug" element={<MusicDetail />} />
 
         <Route path="/about" element={<About />} />
         

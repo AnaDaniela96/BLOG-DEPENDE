@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import posts from "@/features/blog/data/post";
+import { useEffect, useState } from "react";
 import movies from "@/features/play/movies/data/movies";
 import { InfoCard } from "../components/infoCards";
 
@@ -46,17 +46,42 @@ function MiniCard({ title, subtitle, to, cover }) {
 }
 
 export default function Home() {
-  const latestPosts = [...posts]
-    .sort((a, b) => new Date(b.date) - new Date(a.date))
-    .slice(0, 3);
+  const [latestPosts, setLatestPosts] = useState([]);
+  const [loadingPosts, setLoadingPosts] = useState(true);
+  const [postsError, setPostsError] = useState("");
 
   const latestMovies = movies.slice(0, 3);
 
+  useEffect(() => {
+    const fetchLatestPosts = async () => {
+      try {
+        setLoadingPosts(true);
+        setPostsError("");
+
+        const response = await fetch("http://localhost:3001/api/content");
+
+        if (!response.ok) {
+          throw new Error("No se pudieron cargar los posts");
+        }
+
+        const data = await response.json();
+
+        const latestThree = data.slice(0, 3);
+        setLatestPosts(latestThree);
+      } catch (error) {
+        console.error("Error cargando últimos posts:", error);
+        setPostsError(error.message || "Ocurrió un error");
+      } finally {
+        setLoadingPosts(false);
+      }
+    };
+
+    fetchLatestPosts();
+  }, []);
+
   return (
     <div className="space-y-14">
-      {/* HERO */}
       <section className="relative overflow-hidden rounded-b-lg text-brand-cream">
-        {/* Fondo sólido con tu variable secondary + brillo radial */}
         <div
           className="absolute inset-0 opacity-95"
           style={{ backgroundColor: "var(--accent-color)" }}
@@ -68,10 +93,9 @@ export default function Home() {
               "radial-gradient(600px 200px at 20% 10%, rgba(255,255,255,.25), transparent 60%)",
           }}
         />
-        {/* Contenido */}
         <div className="relative max-w-6xl mx-auto px-6 py-16 sm:py-24">
           <p className="uppercase tracking-[.2em] text-sm opacity-90">
-            Depende Revista digital{" "}
+            Depende Revista digital
           </p>
           <h1 className="mt-2 text-3xl sm:text-5xl font-bold leading-tight">
             Cultura pop con mirada{" "}
@@ -94,7 +118,6 @@ export default function Home() {
             </span>
           </div>
 
-          {/* CTA */}
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
               to="/blog"
@@ -118,25 +141,34 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ÚLTIMOS POSTS */}
       <section className="max-w-6xl mx-auto px-6">
         <SectionTitle to="/blog">Visita el blog</SectionTitle>
-        <div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {latestPosts.map((p) => (
-            <MiniCard
-              key={p.slug}
-              title={p.title}
-              subtitle={p.excerpt}
-              to={`/blog/${p.slug}`}
-              cover={p.cover}
-            />
-          ))}
-        </div>
+
+        {loadingPosts && (
+          <p className="mt-6 text-gray-600">Cargando últimos posts...</p>
+        )}
+
+        {postsError && (
+          <p className="mt-6 text-red-600">{postsError}</p>
+        )}
+
+        {!loadingPosts && !postsError && (
+          <div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {latestPosts.map((p) => (
+              <MiniCard
+                key={p.slug}
+                title={p.title}
+                subtitle={p.excerpt}
+                to={`/blog/${p.slug}`}
+                cover={p.cover_url}
+              />
+            ))}
+          </div>
+        )}
       </section>
 
       <FeaturedContent />
 
-      {/* MISCELÁNEA: Películas */}
       <section className="max-w-6xl mx-auto px-6">
         <SectionTitle to="/miscelanea">¿Qué ver?</SectionTitle>
         <div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -165,7 +197,6 @@ export default function Home() {
         />
       </section>
 
-      {/* MISCELÁNEA: Literatura */}
       <section className="max-w-6xl mx-auto px-6">
         <SectionTitle to="/miscelanea">Recomendaciones de libros</SectionTitle>
         <div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -183,7 +214,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 🎙 PODCAST */}
       <section className="max-w-6xl mx-auto px-6 my-12">
         <div className="rounded-2xl border card-podcast shadow-sm overflow-hidden">
           <div className="p-6 sm:p-8">
@@ -197,7 +227,6 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Embed de Spotify */}
           <div className="px-6 pb-6 sm:px-8">
             <iframe
               title="Podcast player"
@@ -216,7 +245,6 @@ export default function Home() {
       </section>
 
       <PostsCarousel />
-
       <NewsletterCard />
     </div>
   );
